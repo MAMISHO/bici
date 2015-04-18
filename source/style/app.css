@@ -1,0 +1,59 @@
+.panels-sample-sliding-panels > .panel-single {
+	width: 250px;
+	background-color: #EAEAEA;
+	-moz-box-shadow: -4px 0 4px rgba(0,0,0,0.3);
+	-webkit-box-shadow: -4px 0 4px rgba(0,0,0,0.3);
+	box-shadow: -4px 0 4px rgba(0,0,0,0.3);
+}
+.panels-sample-slinding-hide{
+	width: 1px;
+	background-color: #EAEAEA;
+	-moz-box-shadow: -4px 0 4px rgba(0,0,0,0.3);
+	-webkit-box-shadow: -4px 0 4px rgba(0,0,0,0.3);
+	box-shadow: -4px 0 4px rgba(0,0,0,0.3);
+}
+.panels-sample-sliding-item {
+	padding: 10px;
+	border-bottom: 1px solid black;
+}
+
+.panels-sample-sliding-content {
+	text-align: left;
+	padding: 10px;
+}
+.boton-hide{
+	/*height: 0px;*/
+	/*display: ;*/
+}
+/*Mapa*/
+body {
+
+	margin:0;
+
+	padding:0;
+
+}
+
+#map {
+
+	position:absolute;
+
+	top:0;
+
+	bottom:0;
+
+	width:100%;
+
+}
+
+.map {
+
+	position:absolute;
+
+	top:0;
+
+	bottom:0;
+
+	width:100%;
+
+}

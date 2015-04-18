@@ -1,0 +1,27 @@
+{
+paises:[
+{id:"AT", nombre:"Austria"},
+{id:"AU", nombre:"Australia"},
+{id:"BE", nombre:"Bélgica"},
+{id:"BR", nombre:"Brasil"},
+{id:"CA", nombre:"Canadá"},
+{id:"CL", nombre:"Chile"},
+{id:"CY", nombre:"Chipre"},
+{id:"DE", nombre:"Alemania"},
+{id:"ES", nombre:"España"},
+{id:"FR", nombre:"Francia"},
+{id:"GB", nombre:"Gran Bretaña"},
+{id:"GR", nombre:"Grecia"},
+{id:"HU", nombre:"Hungría"},
+{id:"IE", nombre:"Irlanda"},
+{id:"IT", nombre:"Italia"},
+{id:"JP", nombre:"Japón"},
+{id:"LT", nombre:"Lituania"},
+{id:"LU", nombre:"Luxemburgo"},
+{id:"MX", nombre:"México"},
+{id:"NO", nombre:"Noruega"},
+{id:"RU", nombre:"Rusia"},
+{id:"SE", nombre:"Suecia"},
+{id:"SI", nombre:"Slovenia"},
+{id:"US", nombre:"Estados Unidos"}
+]}
