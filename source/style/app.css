@@ -25,35 +25,34 @@
 	/*height: 0px;*/
 	/*display: ;*/
 }
+
+
 /*Mapa*/
 body {
-
 	margin:0;
-
 	padding:0;
-
 }
-
 #map {
-
 	position:absolute;
-
 	top:0;
-
 	bottom:0;
-
 	width:100%;
-
 }
-
 .map {
-
 	position:absolute;
-
 	top:0;
-
 	bottom:0;
-
 	width:100%;
-
+}
+/*estaciones*/
+.ciudad{
+	border: 1px solid #333;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	padding: 5px;
+	margin: 0;
+	text-align: left;
+	font-size: 1.3em;
+	background-color: #333;
+	color: white;
 }
