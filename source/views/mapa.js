@@ -22,7 +22,7 @@ enyo.kind({
             name: 'map',
             classes: 'map',
             allowHtml: true,
-            content: "example"
+            content: "Mapa"
         }]
     }],
     //* @protected
