@@ -1720,25 +1720,34 @@
 
 .panels-sample-sliding-panels > .panel-single {
 	width: 250px;
-	background-color: #EAEAEA;
+	/*background-color: #EAEAEA;*/
+	background-color: #272b30;
 	-moz-box-shadow: -4px 0 4px rgba(0,0,0,0.3);
 	-webkit-box-shadow: -4px 0 4px rgba(0,0,0,0.3);
 	box-shadow: -4px 0 4px rgba(0,0,0,0.3);
 }
 .panels-sample-slinding-hide{
 	width: 1px;
-	background-color: #EAEAEA;
+	/*background-color: #EAEAEA;*/
+	background-color: #272b30;
 	-moz-box-shadow: -4px 0 4px rgba(0,0,0,0.3);
 	-webkit-box-shadow: -4px 0 4px rgba(0,0,0,0.3);
 	box-shadow: -4px 0 4px rgba(0,0,0,0.3);
 }
 .panels-sample-sliding-item {
 	padding: 10px;
+	color: #c8c8c8;
+	font-size: 1.4em;
 	border-bottom: 1px solid black;
+}
+.panels-sample-sliding-item:hover{
+	background-color: #3e444c;
+	cursor: pointer;	
 }
 
 .panels-sample-sliding-content {
 	text-align: left;
+	color: #c8c8c8;
 	padding: 10px;
 }
 .boton-hide{
@@ -1767,12 +1776,13 @@ body {
 /*estaciones*/
 .ciudad{
 	border: 1px solid #333;
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
-	padding: 5px;
-	margin: 0;
+	/*border-top-left-radius: 5px;*/
+	/*border-top-right-radius: 5px;*/
+	border-radius: 50px;
+	padding: 10px;
+	margin: 10px;
 	text-align: left;
-	font-size: 1.3em;
+	font-size: 1.5em;
 	background-color: #333;
 	color: white;
 }
