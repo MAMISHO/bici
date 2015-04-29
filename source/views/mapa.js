@@ -11,6 +11,7 @@ enyo.kind({
         ciudad:"",
         stations:[],
         description:"",
+        ambiente:"",
         titulo:"Ciudad de Wien"
     },
     components: [{
@@ -58,6 +59,7 @@ enyo.kind({
             },
             properties: {
                 title: this.titulo,
+                tiempo: this.ambiente,
                 description: this.description,
                 // one can customize markers by adding simplestyle properties
                 // https://www.mapbox.com/guides/an-open-platform/#simplestyle
@@ -72,6 +74,7 @@ enyo.kind({
             // here you call `bindPopup` with a string of HTML you create - the feature
             // properties declared above are available under `layer.feature.properties`
             var content = '<h2>'+layer.feature.properties.title+'<\/h2>'
+                 + layer.feature.properties.tiempo + '<br \/>'
                  + layer.feature.properties.description + '<br \/>';
             
             layer.bindPopup(content);
@@ -110,8 +113,15 @@ enyo.kind({
         this.titulo = tit;
     },
 
+    setAmbiente: function(amb, grados, descripcion){
+        this.ambiente = '<img src="http://openweathermap.org/img/w/'+ amb +'.png" alt="">'
+                        + "Temperatura: " + grados + " " + descripcion;
+        // console.log(this.ambiente);
+    },
+
     setEstacion: function(estacion){
         // console.log(estacion)
+        this.ambiente = "";
         this.setLocationStation(estacion.latitude, estacion.longitude);
         var de = "<h3>" + estacion.name + "<\/h3>";
         de += "<div class='ciudad'><i class='fa fa-unlock'></i>&nbsp;&nbsp; : &nbsp;" + estacion.empty_slots + '<br \/>' 

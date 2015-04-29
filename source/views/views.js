@@ -4,6 +4,7 @@ enyo.kind({
 	fit: true,
 	published:{
 		api: "http://api.citybik.es",
+		api2:"http://api.openweathermap.org/data/2.5/weather?q=",
 		networks:"/v2/networks",
 		data:[],	//datos principales de la API
 		pais:[],	//ciudades que tiene el pais
@@ -45,6 +46,7 @@ enyo.kind({
 		this.inherited(arguments);
 		this.cargarV1();
 		this.cargarV2("/v2/networks/citybike-wien");
+		this.condicionesAmbientales("wien", "AT");
 	},
 
 	paisesTap: function(inSender, inEvent){
@@ -163,6 +165,7 @@ enyo.kind({
     ciudadTap: function(inSender, inEvent){
     	// mostramos la ciudad en el mapa
     	var ciudad = this.pais[inEvent.index];
+    	// console.log(ciudad);
     	
   		var latitud  = ciudad.location.latitude;
   		var longitud = ciudad.location.longitude;
@@ -170,7 +173,8 @@ enyo.kind({
 
     	//solicitamos las estaciones y las cargamos en la lista
     	this.cargarV2(ciudad.href);
-
+    	//solicitamos las condiciones ambientales
+    	this.condicionesAmbientales(ciudad.location.city, ciudad.location.country);
 
     	//mostramos los cambios en el mapa
     	if(this.$.panel.getIndex()==0){
@@ -186,6 +190,33 @@ enyo.kind({
     	var index = inEvent.index;
     	// console.log(this.ciudad.stations[index]);
     	this.$.mapa.setEstacion(this.ciudad.stations[index]);
+    },
+
+    condicionesAmbientales: function(ciudad, pais){
+    	// console.log(this.api + network);
+        var request = new enyo.Ajax({
+            url: this.api2 + ciudad + "," + pais,
+            method: "GET",
+            cacheBust: false,
+            callbackName: null,
+            overrideCallback: null
+        });
+
+        request.response(enyo.bind(this, "resultadoAmbiente"));
+        request.go();
+    },
+
+    resultadoAmbiente: function(inRequest, inResponse){
+    	if (!inResponse){
+        	return;
+        }
+    	// console.log(inResponse.main);
+    	var temperatura = inResponse.main;
+    	var tiempo = inResponse.weather[0];
+    	var icon = tiempo.icon;
+    	var grados = temperatura.temp - 273;
+    	var descripcion = tiempo.description;
+    	this.$.mapa.setAmbiente(icon, grados, descripcion);
     },
 
     //Paises Ordenados para hacer un Producto cartesiano con los paises que trae la API
