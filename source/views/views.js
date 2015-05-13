@@ -87,7 +87,7 @@ enyo.kind({
 		// this.$.repeater1.setCount(this.data.length);
 	},
 
-	cargarV1: function(){
+	cargarV1: function(){ //trae ls paises.
         var request = new enyo.Ajax({
             url: this.api + this.networks,
             method: "GET",
@@ -125,7 +125,7 @@ enyo.kind({
         this.$.listaCiudades.render();
     },
 
-    cargarV2: function(network){
+    cargarV2: function(network){ //trae estaciones de la ciudad seleccionada
     	// console.log(this.api + network);
         var request = new enyo.Ajax({
             url: this.api + network,
