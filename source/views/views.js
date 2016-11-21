@@ -4,7 +4,7 @@ enyo.kind({
 	fit: true,
 	published:{
 		api: "http://api.citybik.es",
-		api2:"http://api.openweathermap.org/data/2.5/weather?q=",
+		api2:"http://api.openweathermap.org/data/2.5/weather?APPID=93083466742c7b7e8814f737b7129692&q=",
 		networks:"/v2/networks",
 		data:[],	//datos principales de la API
 		pais:[],	//ciudades que tiene el pais
